@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Resume</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .welcome-section {
+      background-image: url('https://images.unsplash.com/photo-1638184984605-af1f05249a56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+
+    .navbar {
+      transition: all 0.3s;
+    }
+
+    .navbar {
+      background-color: #1a7ee2;
+    }
+
+    .navbar .nav-link {
+      color: #ffffff;
+    }
+
+    .section {
+      padding: 80px 0;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-heading h2 {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .section-heading p {
+      font-size: 18px;
+      font-weight: 300;
+      color: #888;
+    }
+
+    .icon-link {
+      color: #000;
+      font-size: 24px;
+      margin-right: 10px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      margin-bottom: 20px;
+      padding: 10px;
+      width: 100%;
+    }
+
+    .contact-form button {
+      padding: 10px 30px;
+      background-color: #000;
+      color: #fff;
+      border: none;
+    }
+
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      display: none;
+      font-size: 24px;
+      color: #000;
+      background-color: #fff;
+      padding: 10px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    @media (min-width: 768px) {
+      .navbar {
+        background-color: transparent !important;
+      }
+
+      .navbar .nav-link {
+        color: #fff !important;
+        font-weight: 600;
+        transition: color 0.3s;
+      }
+
+      .navbar:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+
+      .navbar:hover .nav-link {
+        color: #fff !important;
+      }
+
+      .back-to-top {
+        display: block;
+      }
+    }
+
+    /*Gallery */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 10px;
+      margin: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#experience">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#education">Education</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#blog">Blog</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Welcome Section -->
+  <section id="welcome" class="welcome-section">
+    <div class="container">
+      <h1 style="text-align:center;">Welcome to my page <p style="font-size:48px">
+        &#128512;
+        </p> <div id="result"></div></h1>
+      <h3 style="text-align:center;">I am a motivated IT Engineer and a passionate knowledge seeker</h3>
+      <h3 style="text-align:center;">Please scroll down to learn more about me</h3>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>About</h2>
+        <p style="text-align:left;">Experienced IT Engineer with over 5 years hands-on experience spanning diverse on-premises and cloud projects. 
+          Adept at leading, troubleshooting, and automating application deployment processes from initial packaging to successful implementation.<br><br>
+        
+        In addition to my IT endeavors, I actively engage in entrepreneurial ventures, particularly in the realm of business
+        startups. Furthermore, I find great joy in immersing myself in the world of cinema, indulging in captivating movies that
+        inspire me. When I'm not exploring the depths of the film industry, you'll likely find me engrossed in exciting video
+        games that fuel my sense of adventure. I also prioritize my physical well-being by regularly engaging in exercise to
+        maintain a healthy and balanced lifestyle. Finally, fueled by my insatiable curiosity, I embrace the opportunity to
+        travel the globe, discovering new cultures, and enriching my understanding of the world.</p>
+      </div>
+      <!-- Your content goes here -->
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Experience</h2>
+        <h3 style="text-align:left;">BeyondTrust</h3>
+        <p style="text-align:left;" class="info">Technical Support Engineer</p>
+        <p style="text-align:left;">I collaborate with the Dev team to maintain customers' BeyondTrust resources in their cloud and on-prem infrastructure.
+        My role involves ensuring the availability and uptime of applications, aiming for 99.9% reliability. I achieve this by
+        configuring High Availability setups and utilizing observability tools and metrics. Additionally, I handle the
+        configuration and troubleshooting of applications running on SQL databases and Windows IIS servers. I am also
+        responsible for performing seamless application and service upgrades in both Production and Quality Assurance
+        environments, without causing any downtime. Lastly, I take the lead in integrating Azure SAML and MFA authentication
+        methods into multiple deployment environments..</p>
+        <br>
+        <h3 style="text-align:left;" >Long View Systems</h3>
+        <p style="text-align:left;" class="info">Cloud Systems Consultant</p>
+        <p style="text-align:left;" >I performed root cause analysis, and resolved issues for a large user base, specifically
+        focusing on Active Directory, software, and networking solutions.        
+        My responsibilities included setting up monitoring and performance measurement tools to ensure the health, performance,
+        and availability of cloud resources. I also created and updated Quick Reference Guides (QRGs) to document improved
+        procedures for common issues encountered by service desk staff.        
+        To increase efficiency and security, I developed scripts for server updates, automating the process and ensuring the
+        elimination of security vulnerabilities. Additionally, I performed regular maintenance tasks for tenant sites, including
+        both weekly and lifecycle maintenance activities.</p>
+        <br>
+        <h3 style="text-align:left;">Tek-Expert</h3>
+        <p style="text-align:left;" class="info">Cloud Engineer</p>
+        <p style="text-align:left;">I conducted the integration of Identity Access Management, resulting in enhanced security and
+        accountability. Additionally, I actively participated in executing migration projects from on-premises to Azure. By
+        utilizing Azure Monitor & Log Analytics, I closely monitored the performance of systems and applications. Moreover, I
+        efficiently created ARM templates to automate deployment and configuration tasks, ensuring consistent and streamlined
+        processes. Through resource optimization and implementation of cost-saving measures, I effectively improved efficiency
+        and reduced expenses for clients in their Azure environments.</p>
+        <br>
+        <h3 style="text-align:left;">Blueman Consulting</h3>
+        <p style="text-align:left;" class="info">Server Administrator</p>
+        <p style="text-align:left;">I diagnosed and resolved various server-related issues, encompassing hardware failures, software conflicts,
+        and network connectivity problems. Additionally, I efficiently managed backup and recovery solutions for servers and
+        critical data. Another crucial aspect of my role involved maintaining Active Directory services, including user
+        accounts, groups, and organizational units..</p>
+
+      </div>
+      
+      <!-- Your content goes here -->
+    </div>
+<!---->
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Projects</h2>
+        <h3 style="text-align:left;">Microservices Deployment</h3>
+        <p style="text-align:left;">Led a Java-based application hosted on a Tomcat Server, with an SQL backend deployment project, where we delivered an internal-facing application to AWS Kubernetes services using Jenkins CI, 
+          AWS Route 53, AWS Application Gateway, GitHub, SonarQube for code quality, and Docker for containerization. I primarily worked on the Jenkins CI, creating Docker scripts, and AWS infrastructure deployment.</p>
+        <br>
+        <h3 style="text-align:left;">Web App Deployment</h3>
+        <p style="text-align:left;">Collaborated with developers to deploy a web app that uses API triggers to read and write to an Azure Table Database.
+           I worked on creating the Python-based API function and deployment with GitHub Actions. Other technologies used include Azure Storage Account, Monitor, and Terraform.</p>
+      </div>
+      <!-- Your content goes here -->
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Skills</h2>
+        <div style="text-align:left;" class="skills">
+          <p class="info">Operating System: Linux and Windows</p>
+          <p class="info">Cloud platform: Azure, AWS</p>
+          <p class="info">CI/CD: Jenkins & GitHub Action</p>
+          <p class="info">Automation: Terraform, Shell, Azure CLI, Python, YAML</p>
+          <p class="info">Observability: Prometheus & Grafana, Datadog, Azure Monitor & log Analytics</p>
+          <p class="info">Containerization: Docker, Kubernetes</p>
+          <p class="info">Database: Ms SQL, Azure CosmosDB, AWS DynamoDB</p>
+          <p class="info">Code Quality: Sonarqube</p>
+          <p class="info">Security: BeyondTrust Application Suite</p>
+        </div>
+      </div>
+      <!-- Your content goes here -->
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Education & Certification</h2>
+        <h3 style="text-align:left;">Mathematics & Statistics</h3>
+        <p style="text-align:left;" class="info">University of Lagos</p><br>
+        <h3 style="text-align:left;">Computer Information Technology</h3>
+        <p style="text-align:left;" class="info">Lethbridge College</p>
+      </div>
+      <!-- Your content goes here -->
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section id="blog" class="section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Blog</h2>
+        <div class="gallery">
+          <img src="https://www.drupal.org/files/styles/grid-4-2x/public/datadog-logo-purple.png?itok=1gen8ZoL" alt="Image 1">
+          <img src="https://play-lh.googleusercontent.com/ZWBjNoHnKKlWrwLp_J5aL6mt7kLphbP2N5tKItvknt8MIww35t9sLAI1Cmt0HrOSyREF" alt="Image 2">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Python.svg/640px-Python.svg.png" alt="Image 7">
+          <img src="https://istio.io/img/logo.png" alt="Image 4">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Microsoft_Azure.svg/1200px-Microsoft_Azure.svg.png"
+            alt="Image 3">
+          <img src="https://www.architect.io/wp-content/uploads/2023/02/terraform-logo-on-black-square-440x440.png" alt="Image 5">
+          <img src="https://play-lh.googleusercontent.com/PCpXdqvUWfCW1mXhH1Y_98yBpgsWxuTSTofy3NGMo9yBTATDyzVkqU580bfSln50bFU" alt="Image 6">
+          <img src="https://servicenav.coservit.com/wp-content/uploads/2022/05/86-1.jpg" alt="Image 8">
+
+        </div>
+      </div>
+      <!-- Your content goes here -->
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h3 style="text-align:left;">Contact</h3>
+          <!-- Your contact form goes here -->
+          <p>Lamaianthony@gmail.com</p>
+        </div>
+        <div class="col-md-6 text-right">
+          <h4>Follow Me</h4>
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://medium.com/@lamaianthony"><i class="fa-solid fa-newspaper"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.linkedin.com/in/lamaianthony/"><i class="fa-brands fa-linkedin"></i></a></li>
+            <li class="list-inline-item"><a href="https://github.com/Git-LAnthony"><i class="fa-brands fa-github"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Navbar scroll effect
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+          $('.navbar').addClass('navbar-scrolled');
+        } else {
+          $('.navbar').removeClass('navbar-scrolled');
+        }
+      });
+
+      // Smooth scrolling
+      $('a.nav-link').click(function () {
+        $('html, body').animate({
+          scrollTop: $($.attr(this, 'href')).offset().top
+        }, 500);
+        return false;
+      });
+
+      // Back to top button
+      $('.back-to-top').click(function () {
+        $('html, body').animate({
+          scrollTop: 0
+        }, 500);
+      });
+    });
+
+    //javascript
+    async function fetchDataAndDisplay() {
+        try {
+          const apiUrl = 'https://resumefuncapp.azurewebsites.net/api/HttpTrigger?';
+          const response = await fetch(apiUrl);
+
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+
+          const data = await response.text();
+          document.getElementById('result').innerText = data;
+        } catch (error) {
+          console.error('Error fetching data:', error.message);
+          document.getElementById('result').innerText = 'Error fetching data.';
+        }
+      }
+
+      fetchDataAndDisplay();
+  </script>
+</body>
+
+</html>
