@@ -1,21 +1,17 @@
-# Configure the Azure provider
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: MPL-2.0
+
 terraform {
-  required_providers {
-    azurerm = {
-      source  = "hashicorp/azurerm"
-      version = "~> 3.0.2"
+  cloud {
+    organization = "ResumeApp"
+
+    workspaces {
+      name = "azureresumeappworkspace"
     }
   }
-
-  required_version = ">= 1.1.0"
 }
 
 provider "azurerm" {
-    subscription_id   = "<azure_subscription_id>"
-  tenant_id         = "<azure_subscription_tenant_id>"
-  client_id         = "<service_principal_appid>"
-  client_secret     = "<service_principal_password>"
-
   features {}
 }
 
