@@ -2,16 +2,18 @@
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 # More info on Python, GitHub Actions, and Azure Functions: https://aka.ms/python-webapps-actions
 
-name: deploy Python project to Azure Function App - resumeappfunction
+name: Update Python project to Azure Function App - resumeappfunction
 
 on:
   push:
-      branches: [ main ]
-      paths: [Backend]
+      branches:
+      - main
+      paths:
+      - Backend
 
 env:
   AZURE_FUNCTIONAPP_NAME: 'HttpTrigger'   # set this to your function app name on Azure
-  AZURE_FUNCTIONAPP_PACKAGE_PATH: 'Backend' # set this to the path to your web app project, defaults to the repository root
+  AZURE_FUNCTIONAPP_PACKAGE_PATH: './Backend' # set this to the path to your web app project, defaults to the repository root
   PYTHON_VERSION: '3.9' # set this to the python version to use (supports 3.6, 3.7, 3.8)
 
 jobs:
@@ -33,7 +35,7 @@ jobs:
         pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}'
         python -m pip install --upgrade pip
         pwd
-        pip install -r requirements.txt --target=".python_packages/lib/site-packages"
+        pip install -r ./Backend/requirements.txt --target=".python_packages/lib/site-packages"
         popd
 
     - name: 'Run Azure Functions Action'
