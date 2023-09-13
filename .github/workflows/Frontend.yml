@@ -11,7 +11,9 @@ jobs:
     - uses: actions/checkout@v3
     - uses: azure/login@v1
       with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+        tenant_id: ${{ secrets.ARM_TENANT_ID }}
+        client_id: ${{ secrets.ARM_CLIENT_ID }}
+        subscription_id: ${{ secrets.ARM_SUBSCRIPTION_ID }}
 
     - name: Upload to web blob storage
       uses: azure/CLI@v1
