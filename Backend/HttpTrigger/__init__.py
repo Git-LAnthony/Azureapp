@@ -7,7 +7,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     #fetch connection string from app settings
     connection_string = os.environ["CosmosDbConnectionString"]
     
-    # Initialize the TableClient
+    # Initialize the TableClient connection
     table_client = TableClient.from_connection_string(connection_string, table_name="Table1")
     
     # Retrieve the entity with PartitionKey="MyCount" and RowKey="CountValue"
