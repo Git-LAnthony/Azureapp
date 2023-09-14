@@ -8,8 +8,7 @@ on:
   push:
       branches:
       - main
-      paths:
-      - Backend
+
 
 env:
   AZURE_FUNCTIONAPP_NAME: 'HttpTrigger'   # set this to your function app name on Azure
