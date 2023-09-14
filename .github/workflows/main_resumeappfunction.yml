@@ -9,8 +9,7 @@ on:
         branches:
         - main
         paths:
-        - Backend
-
+        - 'Backend/**'
 
 
 env:
