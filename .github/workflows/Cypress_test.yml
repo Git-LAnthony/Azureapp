@@ -7,11 +7,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        run: |
-          cd /Frontend/cypress
+
 
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
           browser: chrome
-          project: cypress/e2e/home.cy.js
+          project: ./Frontend/cypress
