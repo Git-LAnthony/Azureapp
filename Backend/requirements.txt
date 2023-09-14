@@ -5,4 +5,3 @@
 azure-functions
 azure-data-tables
 python-dotenv
-azure-error
